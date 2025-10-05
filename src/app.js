@@ -7,7 +7,7 @@ import petsRouter from './routes/pets.router.js';
 import adoptionsRouter from './routes/adoption.router.js';
 import sessionsRouter from './routes/sessions.router.js';
 import mockRouter from './routes/mocks.router.js';
-import { errorHandler } from './middleware/errorHandler.js';
+import { errorHandler } from './middleware/error/errorHandler.js';
 import compress from 'compression';
 import { config } from './config/config.js';
 

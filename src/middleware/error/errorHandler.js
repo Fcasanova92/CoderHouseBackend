@@ -1,6 +1,7 @@
-export const errorHandler = (err, req, res, next) => {
-  console.error(`[ERROR] ${err.name}: ${err.message}`);
+import logger from "../../utils/logger";
 
+export const errorHandler = (err, req, res, next) => {
+  logger.error(`${err.name}: ${err.message} - ${req.method} ${req.originalUrl} - ${req.ip}`);
   if (err.statusCode) {
     return res.status(err.statusCode).json({
       status: 'error',
