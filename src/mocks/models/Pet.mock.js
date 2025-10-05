@@ -1,4 +1,4 @@
-export class Pet {
+export class PetMock {
   constructor({
     name,
     specie,

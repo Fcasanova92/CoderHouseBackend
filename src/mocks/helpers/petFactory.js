@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { Pet } from './Pet.js';
+import { PetMock } from '../models/Pet.mock.js';
 
 const speciesList = ['dog', 'cat', 'bird', 'hamster', 'rabbit', 'turtle', 'lizard', 'fish'];
 
@@ -23,7 +23,7 @@ export const petFactory = {
       const specie = faker.helpers.arrayElement(speciesList);
       const name = generatePetName(specie);
 
-      return new Pet({
+      return new PetMock({
         name,
         specie,
         birthDate: faker.date.birthdate({ min: 1, max: 15, mode: 'age' }),
