@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import bcrypt from 'bcrypt';
-import { UserMock } from '../models/user.mock';
+import { UserMock } from '../models/User.mock.js'
 
 export const userFactory = (number = 50) => {
   const users = [];
