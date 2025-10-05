@@ -6,7 +6,7 @@ import mocksController from '../controllers/mocks.controller.js';
 const router = Router();
 
 router.get('/mockingusers”',userMocks.createUsers);
-router.get('/mockingPets', petsMocks.createPets);
+router.get('/mockingpets', petsMocks.createPets);
 router.post('/generateData', mocksController.generateData);
 
 export default router;
