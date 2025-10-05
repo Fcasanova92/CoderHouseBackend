@@ -1,7 +1,9 @@
-import logger from "../utils/logger.js";
+
+import logger  from '../utils/logger.js'
 import { userFactory } from "./helpers/userFactory.js";
 
 const createUsers = async (req, res, next) => {
+  console.log("entre aca")
   try {
     const { number = 50 } = req.body; 
     const users = userFactory(number);

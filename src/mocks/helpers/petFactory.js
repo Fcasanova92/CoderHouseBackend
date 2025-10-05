@@ -1,17 +1,16 @@
 import { faker } from '@faker-js/faker';
 import { PetMock } from '../models/Pet.mock.js';
 
-const speciesList = ['dog', 'cat', 'bird', 'hamster', 'rabbit', 'turtle', 'lizard', 'fish'];
+const speciesList = ['dog', 'cat', 'bird', 'cow', 'rabbit', 'snake', 'fish'];
 
 const generatePetName = (specie) => {
   switch (specie) {
     case 'dog': return faker.animal.dog();
     case 'cat': return faker.animal.cat();
     case 'bird': return faker.animal.bird();
-    case 'hamster': return faker.animal.hamster();
+    case 'cow': return faker.animal.cow();
     case 'rabbit': return faker.animal.rabbit();
-    case 'turtle': return faker.animal.turtle();
-    case 'lizard': return faker.animal.lizard();
+    case 'snake': return faker.animal.snake();
     case 'fish': return faker.animal.fish();
     default: return 'Unknown';
   }

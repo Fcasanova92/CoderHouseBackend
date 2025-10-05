@@ -1,4 +1,5 @@
-import logger from "../../utils/logger";
+import logger from "../../utils/logger.js";
+
 
 export const errorHandler = (err, req, res, next) => {
   logger.error(`${err.name}: ${err.message} - ${req.method} ${req.originalUrl} - ${req.ip}`);
