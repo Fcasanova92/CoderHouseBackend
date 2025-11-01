@@ -32,6 +32,7 @@ const updateUser = async (req, res, next) => {
     if (!user) return res.status(404).send({ status: "error", error: "User not found" });
 
     const result = await usersService.update(userId, updateBody);
+    console.log({updateBody})
     logger.info(`Usuario actualizado: ${user._id} - ${user.first_name} ${user.last_name}`);
     res.send({ status: "success", message: "User updated" });
   } catch (error) {
